@@ -1,5 +1,3 @@
-const assert = require("assert");
-
 ABC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 compress = (s) => {
   s = 1 + [...s].join(1);
@@ -14,4 +12,5 @@ compress = (s) => {
   return s;
 };
 
-assert.equal(compress("AAABBAAC"), "3A2B2A1C");
+if (compress("AAABBAAC") != "3A2B2A1C") throw 0;
+require("assert").equal(compress("AAABBAAC"), "3A2B2A1C");
